@@ -6,7 +6,15 @@ Yes, we as programmers say oops a lot.
 Developoops - a share website for questions and answers on software development issues.
 Including connecting to OpenAi - the first to answer the question.
 
-The site was written in technologies:
-Server-C#-Entity framework
-Client-Angular17
-Database Sql-Server.
+
+
+
+
+
+
+Technologies Used:
+Frontend: Angular
+Backend:c#-entity framework
+Authentication: JSON Web Tokens (JWT)
+Database: SQL Server
+Integration: Gmail API for sending emails,openAI,OAuth 2.0 google API
