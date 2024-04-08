@@ -1,0 +1,37 @@
+.example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+  .nav-links .search {
+    background: white;
+    border-radius: 15px;
+    padding: 0.5em;
+    border: 0.6px solid rgb(171, 162, 162);
+  }
+  .search-btn {
+    border: none;
+    background: white;
+    margin: 20px 0;
+  }
+  
+  .nav-links input {
+    border: none;
+    outline: none;
+  }
+  .search-section {
+    background: white;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  

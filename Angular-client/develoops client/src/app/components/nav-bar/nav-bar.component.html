@@ -1,0 +1,40 @@
+<mat-toolbar>
+  <button (click)="openDialog()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <!-- <span><img src="../../../assets/image/dev.png" alt=""></span> -->
+  <div class="overlap-container">
+    <!-- <span>Develo<span style="font-size:x-large;">V</span></span>
+      <span class="overlap-text">o</span>
+      <span>ps</span> -->
+    <!-- <button (click)="goHome()"><div>Develooops/></div></button> -->
+    <p mat-flat-button (click)="goHome()" style=" font-size: medium; margin: 1%;">Develooops</p>
+  </div>
+  <!-- <a routerLink="/about"> |About</a> -->
+  <span class="spacer"></span>
+
+  <p mat-flat-button (click)="moveSignIn()" style=" font-size: medium; margin: 1%;">SignIn</p>
+  <h1>-</h1>
+  <p mat-flat-button (click)="moveSignUp()" style=" font-size: medium; margin: 1%; ">SignUp</p>
+  <!-- <button mat-icon-button class="icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button> -->
+ 
+  <!-- <button mat-icon-button class="icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+
+  </button> -->
+hello
+<button (click)="moveMyAccount()" style="background:none; border: none; padding: 0;width: 4%;height: 100%;border-radius: 50%;">
+        <img [src]="getUserImageFromSessionStorage()" alt="Avatar" style="	width:100%;
+        height:100%;
+        object-fit:cover;
+        border-radius:50%;
+        object-position:0px 0px;" >
+      </button> 
+
+
+      <h2></h2>
+  <!-- <a routerLink="/SignIn">   |SingIn</a> -->
+
+</mat-toolbar>

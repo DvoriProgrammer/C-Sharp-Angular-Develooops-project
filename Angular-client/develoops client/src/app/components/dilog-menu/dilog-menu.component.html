@@ -1,0 +1,21 @@
+<label class="example-margin"><strong>Categories:</strong></label>
+<!-- <input type="text" [(ngModel)]="serch" (change)="filterCategory()"> -->
+<div class="search-section">
+  
+    <span class="search"><input type="search" placeholder="Enter to search" [(ngModel)]="serch" (change)="filterCategory()"> <button
+            class="search-btn"><i class="fas fa-search"></i></button></span>
+</div>
+
+<mat-radio-group (change)="onCategorySelected($event.value)">
+  <div *ngFor="let category of filterCategoryList" class="contain-student" class="example-section">  
+    <mat-radio-button class="example-margin" [value]="category"> <h4>{{category.text}}</h4>  </mat-radio-button>
+  </div>
+</mat-radio-group>
+
+<div *ngIf="isCategory;else elseBlock">
+   <img src="../../../assets/image/select.png"  [ngStyle]={left:0}> 
+  </div>
+  <ng-template #elseBlock>
+    <img src="../../../assets/image/curiosity search-pana.png" > 
+    <h1>no result</h1>
+  </ng-template>

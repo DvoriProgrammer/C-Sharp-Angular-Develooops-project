@@ -1,0 +1,29 @@
+<br /><br /><br />
+<mat-progress-spinner *ngIf="loading" mode="indeterminate" style="position: sticky;z-index: 9999;left: 50%;top:50%"></mat-progress-spinner>
+<div class="container">
+	<div class="content">
+		<div class="image" style="background-image: url('../../../../../assets/image/Writer.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		height: 80%;"></div>
+			
+	</div>
+	<form id="form" [formGroup]="AddRequrstForm">
+		<div class="title">Add question</div>
+		<div>
+			<label for="password">Title</label>
+			<i class="fas fa-lock"></i>
+
+			<input type="text" name="password" id="password" placeholder="title here" formControlName="Title" />
+		</div>
+	
+		<i class="fas fa-user"></i>
+
+		<textarea type="text" name="username" id="username" placeholder="Content"
+			style="top:0;height:50%;width:100%;" formControlName="Content"></textarea>
+		<input class="ng-hide" id="input-file-id" multiple type="file" formControlName="FileImage"
+			(change)="onFileChange($event)" />
+		<button id="btn" type="button" (click)="AddQuestion()" [disabled]="loading">Submit</button>
+	</form>
+</div>	

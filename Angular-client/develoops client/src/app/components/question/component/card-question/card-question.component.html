@@ -1,0 +1,102 @@
+
+  <br/><br/><br/><br/><br/><br/><br/>
+  
+  
+  <br/><br/><br/>
+  <article class="ad5-padding-y-lg">
+    <header class="ad5-container ad5-max-width-xs ad5-margin-bottom-lg">
+      <div class="ad5-text-component ad5-text-center ad5-line-height-lg ad5-text-gap-md ad5-margin-bottom-md">
+        <!-- <h1>It was going to be a lonely trip back</h1>
+        <p class="ad5-color-contrast-medium ad5-text-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni harum rerum amet.</p> -->
+      </div>
+  
+      <div class="ad5-flex ad5-justify-center">
+        <div class="author author--meta">
+          <a href="#0" class="author__img-wrapper">
+            <img *ngIf="currentQuestion && currentQuestion.user && currentQuestion.user.img" [src]="currentQuestion.user.img" style="width: 100%;">
+          </a>
+          <div class="author__content ad5-text-component ad5-text-gap-2xs">
+            <h4 class="ad5-text-base" *ngIf="currentQuestion && currentQuestion.user && currentQuestion.user.username" ><a href="#0" rel="author">{{currentQuestion.user.username}}
+             </a></h4>
+             <p *ngIf="currentQuestion && currentQuestion.date" class="ad5-text-sm ad5-color-contrast-medium">
+              <time></time> {{ currentQuestion.date  }}
+          </p>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <!-- <figure class="ad5-container ad5-max-width-lg ad5-margin-bottom-lg">
+      <img class="ad5-block ad5-width-100% ad5-radius-lg" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Image description" style="width: 40%;">
+    </figure>
+   -->
+    <div class="ad5-container ad5-max-width-adaptive-sm">
+      <div class="ad5-text-component ad5-line-height-lg ad5-text-gap-md">       
+        <hr>
+  
+        <div class="ad5-text-component__block ad5-text-component__block--outset">
+          <!-- <h3 *ngIf="currentQuestion.title" class="ad5-text-center">{{currentQuestion.title}}</h3>  -->
+        </div>
+  
+        <p *ngIf="currentQuestion.content">{{currentQuestion.content}}</p>
+  
+        <figure class="ad5-text-component__block">
+          <!-- <img src="https://cdn.dribbble.com/users/310943/screenshots/2281993/empty-state-illustrations_still_2x.gif?compress=1&resize=400x300" alt="Image description here">
+          <figcaption>Image caption</figcaption> -->
+        </figure>
+  
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto odit incidunt nobis cumque, assumenda quidem ducimus! Architecto, molestias reiciendis tempora pariatur nobis nam quibusdam, nemo repellendus rerum rem quam soluta.</p>
+        <img *ngIf="currentQuestion.img" [src]="currentQuestion.img" style="width: 80%;">
+        <!-- <figure class="ad5-text-component__block ad5-text-component__block--left" style="margin:4%;" >
+          
+          <figcaption>Image caption</figcaption>
+        </figure> -->
+  
+        <p style="color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis incidunt minus vero deserunt illum perspiciatis sed sit. Officia, quia at? Nisi dolores quis culpa nulla eveniet? Rem vel numquam ipsa voluptatum voluptate illo minima, temporibus atque officia soluta magnam laborum neque alias consequuntur enim aliquid consequatur non accusamus exercitationem. Perspiciatis dolorem a commodi alias, ad corporis iusto magnam in quae deleniti incidunt facilis voluptatibus. Aliquid reprehenderit, provident, totam necessitatibus cumque vel veniam consequuntur maxime iure accusamus explicabo recusandae neque quas?</p>
+  
+        <!-- <figure class="ad5-text-component__block ad5-text-component__block--outset ad5-text-component__block--right">
+          <img src="https://cdn.dribbble.com/users/310943/screenshots/2281993/empty-state-illustrations_still_2x.gif?compress=1&resize=400x300" alt="Image description here">
+          <figcaption>Image caption</figcaption>
+        </figure> -->
+  
+      
+        <p style="color: rgb(255, 255, 255);">ae omnis esse ipsam perspiciatis. Eius repellendus, quas necessitatibus fugit delectus magnam iusto.</p>
+      </div>
+    </div>
+  </article>
+<!-- 
+  <div class="example-button-container">
+    <button mat-fab color="warn" class="add-btn">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div> -->
+  <div class="container" *ngIf="addAnswer">
+    <div class="expandable-textarea">
+      <div id="source-code">
+        <div id="line-numbers"><p>1</p></div>
+        <textarea id="codeblock" [(ngModel)]="userEnteredValue" rows="8" cols="50" ></textarea>
+      </div>
+    </div>
+  
+  </div>
+  
+<div class="example-button-container">
+  <button mat-fab color="warn" class="add-btn" *ngIf="addAnswer" (click)="addFunction()">
+    <mat-icon>send</mat-icon>
+  </button>
+  <button mat-fab color="warn" class="add-btn" *ngIf="!addAnswer" (click)="toggleAddAnswer()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+<div style=" display:grid;grid-template-columns: auto auto ;">
+  <div style="width: 50%;"></div>
+
+  <div *ngIf="currentQuestion.answers" style="right: 0;"><app-answer-list [answersList]="currentQuestion.answers"></app-answer-list></div>
+</div>
+<textarea #codeInput rows="10" cols="50"></textarea>
+
+
+
+
+
+

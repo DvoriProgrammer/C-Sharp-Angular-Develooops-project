@@ -1,0 +1,142 @@
+
+<br/><br/>
+	<div class="container">
+		<div class="forms-container">
+			<div class="signin-signup">
+				<form action="#" class="sign-in-form" [formGroup]="SignUpForm">
+					
+					<h2 class="title">Sign Up</h2>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input type="text" placeholder="Username" formControlName="Username" />
+					</div>
+					@if(SignUpForm.controls['Username'].touched && SignUpForm.controls['Username'].errors?.['required']){
+						<p>You must write your username</p>
+					}
+					@else if(SignUpForm.controls['Username'].errors?.['minlength']){
+					
+						<p>the email must include emaill address</p>
+					
+					}
+				
+                    <div class="input-field">
+						<i class="fas fa-user"></i>
+						<input type="text" placeholder="FirstName" formControlName="FirstName"/>
+					</div>
+					@if(SignUpForm.controls['FirstName'].errors?.['required']&&SignUpForm.controls['FirstName'].touched ){
+							
+						<p>    you must wirte your FirstName</p>
+					
+					}
+					@else if(SignUpForm.controls['FirstName'].errors?.['minlength']){
+					
+						<p>the email must include emaill address</p>
+					
+					}
+                    <div class="input-field">
+						<i class="fas fa-user"></i>
+						<input type="text" placeholder="LastName" formControlName="LastName"/>
+					</div>
+					@if(SignUpForm.controls['LastName'].errors?.['required']&&SignUpForm.controls['LastName'].touched){
+							
+						<p>    you must wirte your Username</p>
+					
+					}
+					@else if(SignUpForm.controls['LastName'].errors?.['minlength']){
+					
+						<p>the email must include emaill address</p>
+					
+					}
+                    <!-- <div class="input-field">
+						<i class="fas fa-user"></i>
+						<input type="number" placeholder="PhoneNumber" />
+					</div> -->
+					<div class="input-field">
+						<i class="fas fa-lock"></i>
+						<input type="password" placeholder="Password" formControlName="Password"/>
+					</div>
+					<div *ngIf="SignUpForm.controls['Password'].errors?.['required']&&SignUpForm.controls['Password'].touched; else elseBlock">
+						<p>Password is required</p>
+					  </div>
+					  <ng-template #elseBlock>
+						<div *ngIf="SignUpForm.controls['Password'].errors?.['customPasswordValidator']&&SignUpForm.controls['Password'].touched; else successBlock">
+						  <p>Password must have at least two letters and three numbers</p>
+						</div>
+						<ng-template #successBlock>
+							<p></p>
+						</ng-template>
+					  </ng-template>
+
+                    <div class="input-field">
+						<i class="fas fa-envelope"></i>
+						<input type="email" placeholder="Email" formControlName="Email"/>
+					</div>
+					@if(SignUpForm.controls['Email'].errors?.['required']&&SignUpForm.controls['Email'].touched){
+							
+						<p>you must wirte your email</p>
+					}
+					@else if(SignUpForm.controls['Email'].errors?.['Email']){
+					
+						<p>the email must include emaill address</p>
+					}
+					 <!-- <div formControlName="role">
+						<label style="display: inline-block; margin-right: 10px;">
+						  <input type="radio"  [value]="'Worker'" checked> Worker
+						</label>
+					  
+						<label style="display: inline-block; margin-right: 10px;">
+						  <input type="radio"  [value]="'Student'"> Student
+						</label>
+					  <label style="display: inline-block;">
+						  <input type="radio"  [value]="'Geeky'"> Geeky
+						</label>
+					  </div> -->
+					  <!-- <select formControlName="role" style="display: inline-block; margin-right: 10px;">
+						<option [value]="Worker">{{Worker}}</option>
+						<option [value]="Student">{{Student}}</option>
+						<option [value]="Geeky">{{Geeky}}</option>
+					</select> -->
+
+ <input class="ng-hide" id="input-file-id" multiple type="file" formControlName="FileImage" (change)="onFileChange($event) " />   
+
+
+ <div style="padding: 50px">
+    <input type="text" [formControl]="searchText" (input)="onTextChange()" placeholder="Search for image" />
+    <div class="row1">
+        <div class="col-3" *ngFor="let image of images">
+            <button (click)="onImageClick(image)">
+                <img [src]="image.largeImageURL" [alt]="image.tags" style="width:90%;height:60%;">
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <button class="btn solid" type="submit" value="Sign up" [disabled]="SignUpForm.invalid" (click)="signUp()"  >Sign up</button>	
+  <div *ngIf="errorMessage" class="error-message" style="color: red;">
+	{{errorMessage  }}
+  </div>			
+					<!-- <p class="social-text">Or Sign in with social platforms</p> -->			
+				</form>	
+			</div>
+		</div>
+		<div class="panels-container">
+			<div class="panel left-panel">
+				<div class="content">
+					<h3>One of Our Valued Members</h3>
+					<p>
+                        Thank you for being part of our community. Your presence enriches our
+                        shared experiences. Let's continue this journey together!
+					</p>
+					<button class="btn transparent" id="sign-up-btn"  (click)="moveSignIn()">
+						Sign In
+					</button>
+				</div>
+				<img  src="../../../assets/image/Sign up-bro.png" class="image" alt="" />
+			</div>
+			
+		</div>
+	</div>
+	<br/><br/><br/><br/><br/><br/>

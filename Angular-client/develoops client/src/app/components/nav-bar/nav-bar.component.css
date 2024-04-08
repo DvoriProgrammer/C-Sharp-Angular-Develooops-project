@@ -1,0 +1,35 @@
+.spacer {
+    flex: 1 1 auto;
+    display: cover;
+  }
+  .mat-toolbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; 
+    text-align: 'center';
+    /* left:0; */
+/* height:100%; */
+  }
+  .overlap-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .overlap-text {
+    position: absolute;
+    top: -20px; /* Adjust the top position to move it above the 'V' */
+    left: 70%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center the text horizontally */
+    font-size: larger; /* Adjust font size for more height */
+    color: red; /* Optional: Set color or other styles */
+    z-index: 1; /* Ensure it appears on top of other text */
+  }
+
+  body.dialog-open {
+    position: fixed;
+    
+  
+left: 250px; /* כאן תוכל לשנות את המרווח כפי שרצית */
+    transition: left 0.3s ease; /* אנימציה למרווח */
+}

@@ -1,0 +1,41 @@
+<div style="position: relative; width: 100%; height: 300px;margin-bottom:10% ;">
+    <img [src]="getUserImageFromSessionStorage()" alt="Profile Image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; object-fit: cover; border-radius: 50%; object-position: 0px 0px;top:100%;z-index: 18888;border-color: azure;border-width: 0.5;">
+    <img [src]="getUserImageFromSessionStorage()" alt="Background Image" style="position: absolute; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; object-fit: cover; object-position: 0px 0px;" >
+</div>
+<!-- <div id="chart">
+    <apexcharts
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [dataLabels]="chartOptions.dataLabels"
+      [title]="chartOptions.title"
+      [colors]="chartOptions.colors"
+    ></apexcharts>
+  </div> -->
+
+<div style="   ">
+  <div class="activity-graph">
+  
+    <div class="body">
+     
+      <div  *ngFor="let activity of activities" >
+ 
+        <!-- <div class="month">{{ activity.percentage }}</div>  -->
+     <!-- <div class="day" [ngClass]="getDayClass(activity.day)">{{ activity.day }}</div>  -->
+        <div class="percentage" [ngStyle]="getPercentageStyle(activity.percentage)" style="width: 20px;height:20px;"   [title]="' in' + activity.day +' '+activity.month +' '+ 'done'+ activity.percentage + ' asking or answer'"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="padding: 0">
+ <!-- <input type="text" [formControl]="searchText" (input)="onTextChange()" placeholder="Search for image" /> -->
+
+ 
+<div class="row1">
+  <div class="col-3" *ngFor="let image of images">
+    <img [src]="image.largeImageURL" [alt]="image.tags" style="width: 90%;height: 90%;">
+  </div>
+</div>
+  
+</div>

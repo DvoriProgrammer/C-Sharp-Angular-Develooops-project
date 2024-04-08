@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Common",
+    "\\Common\\Dto",
+    "\\MyProject",
+    "\\MyProject\\Controllers",
+    "\\Repository",
+    "\\Repository\\Repositories"
+  ],
+  "SelectedNode": "\\Repository\\Repositories\\CategoryRepository.cs",
+  "PreviewInSolutionExplorer": false
+}

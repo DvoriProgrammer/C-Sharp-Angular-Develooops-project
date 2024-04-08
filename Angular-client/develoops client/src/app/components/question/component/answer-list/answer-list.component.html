@@ -1,0 +1,40 @@
+
+
+  <div class="contain-question">
+  <ng-container *ngIf="answersList">
+    <div *ngFor="let answer of answersList" class="comment" style="left:40%;width:60%;display: grid; grid-template-columns: 1fr  1fr;">
+      <!-- תוכן התשובה -->
+      <div style="padding: 10px;">
+        <ng-container *ngIf="answer?.user?.img; else elseBlock">
+          <!-- תמונה רגילה -->
+          <img [src]="answer?.user?.img" alt="avatar" class="avatar" width="60%" />
+        </ng-container>
+        <ng-template #elseBlock>
+          <!-- תמונה אחרת או תמונה סטנדרטית -->
+          <img [src]="getUserImageFromSessionStorage() "class="avatar" width="60%" />
+        </ng-template>
+        <div class="text">
+          <div class="header">
+            <h3>{{answer.user?.username}}</h3>
+            <p style="color: black;">{{answer.date}}</p>
+          </div>
+
+        </div>
+      </div> 
+      <div style="padding: 10px;">
+        <p [innerHTML]="replaceNewlinesWithBr(answer.content)" style="left:8%"></p>
+      </div>
+      <div style="display: flex; align-items: center;">
+        <button *ngIf="answer.id !== undefined" (click)="addScore(answer.id)">👍</button>
+        <span style="margin: 0 5px;">{{answer.score}}</span>
+       
+      </div>
+      <br/><br/><br/><br/>
+    </div>
+    
+
+  
+  </ng-container>
+</div>
+  <!-- כפתורי לייק, מס הנקודות ודיסלייק -->
+ 

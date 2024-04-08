@@ -1,0 +1,51 @@
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\bin\Debug\net6.0\DataContext.deps.json
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\bin\Debug\net6.0\DataContext.runtimeconfig.json
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\bin\Debug\net6.0\DataContext.dll
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\bin\Debug\net6.0\DataContext.pdb
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.AssemblyInfo.cs
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.dll
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\refint\DataContext.dll
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.pdb
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.genruntimeconfig.cache
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\ref\DataContext.dll
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\bin\Debug\net6.0\Repository.dll
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\bin\Debug\net6.0\Repository.pdb
+C:\Users\user1\Desktop\project angular\MyProject\DataContext\obj\Debug\net6.0\DataContext.csproj.CopyComplete
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\bin\Debug\net6.0\DataContext.deps.json
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\bin\Debug\net6.0\DataContext.runtimeconfig.json
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\bin\Debug\net6.0\DataContext.dll
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\bin\Debug\net6.0\DataContext.pdb
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\bin\Debug\net6.0\Repository.dll
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\bin\Debug\net6.0\Repository.pdb
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.AssemblyInfo.cs
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.csproj.CopyComplete
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.dll
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\refint\DataContext.dll
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.pdb
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\DataContext.genruntimeconfig.cache
+C:\Users\user1\Desktop\project angular\C#-server\DataContext\obj\Debug\net6.0\ref\DataContext.dll
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\bin\Debug\net6.0\DataContext.deps.json
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\bin\Debug\net6.0\DataContext.runtimeconfig.json
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\bin\Debug\net6.0\DataContext.dll
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\bin\Debug\net6.0\DataContext.pdb
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\bin\Debug\net6.0\Repository.dll
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\bin\Debug\net6.0\Repository.pdb
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.AssemblyInfo.cs
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.csproj.CopyComplete
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.dll
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\refint\DataContext.dll
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.pdb
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\DataContext.genruntimeconfig.cache
+C:\Users\user1\Desktop\‏‏project angular - עותק (2)\C-Sharp-server\DataContext\obj\Debug\net6.0\ref\DataContext.dll
