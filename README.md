@@ -13,8 +13,12 @@ Including connecting to OpenAi - the first to answer the question.
 
 
 Technologies Used:
-Frontend: Angular
+Frontend: Angular 17
+
 Backend:c#-entity framework
+
 Authentication: JSON Web Tokens (JWT)
+
 Database: SQL Server
+
 Integration: Gmail API for sending emails,openAI,OAuth 2.0 google API
