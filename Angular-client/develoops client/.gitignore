@@ -7,7 +7,7 @@
 /bazel-out
 
 # .env
-src/environments
+src/environments/environment
 
 # Node
 /node_modules
