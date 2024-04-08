@@ -7,8 +7,8 @@
 /bazel-out
 
 # .env
-src/environments/environment.ts
-src/environments/environment.development.ts
+src/environments
+
 # Node
 /node_modules
 npm-debug.log
