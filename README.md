@@ -1,7 +1,8 @@
 If you're a programmer, you've probably encountered errors.
 Sometimes you sat on them for days and weeks.
+
  When you say oops,
-it's time to Develooops 
+it's time to Develooops.
 
 
 Developoops - a share website for questions and answers on software development issues.
