@@ -23,6 +23,12 @@ Database: SQL Server
 
 Integration: Gmail API for sending emails,openAI,OAuth 2.0 google API
 
+
+
+
+![image](https://github.com/DvoriProgrammer/C-Sharp-Angular-Develooops-project/assets/146278969/bae9c51d-be77-4f4a-9c81-54288b68d639)
+
+
 ![image](https://github.com/DvoriProgrammer/C-Sharp-Angular-Develooops-project/assets/146278969/107c4ac4-dc8c-49b1-a300-2d52700e6914)
 
 ![image](https://github.com/DvoriProgrammer/C-Sharp-Angular-Develooops-project/assets/146278969/b848cdc0-c43a-4f69-a376-8351367a7197)
