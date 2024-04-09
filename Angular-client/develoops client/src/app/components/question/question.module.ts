@@ -22,6 +22,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import {FormBuilder, Validators} from '@angular/forms';
 import { DateFromDateTimePipe } from '../../date-from-date-time.pipe';
 
+
 @NgModule({
     declarations: [SuccessComponent, AnswerListComponent, AddQuestionComponent, CardQuestionComponent, ShowQuestionComponent, DilogGptComponent, DailyQuestionComponent],
     imports: [
@@ -39,6 +40,11 @@ import { DateFromDateTimePipe } from '../../date-from-date-time.pipe';
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
+   
+    ],
+    providers: [
+     
+        { provide: 'SPEECH_LANG', useValue: 'en-US' },
     ],
     
 })

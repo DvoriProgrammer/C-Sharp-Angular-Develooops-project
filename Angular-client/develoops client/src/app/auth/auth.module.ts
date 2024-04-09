@@ -16,18 +16,20 @@ import {
   SocialAuthServiceConfig,
   GoogleLoginProvider,
 } from '@abacritt/angularx-social-login';
+import { QuestionModule } from '../../app/components/question/question.module'
+
 
 @NgModule({
   declarations: [
     SignInComponent,
     SignUpComponent,
     MyAccountComponent,
-    
+ 
   ],
   imports: [
     CommonModule,
     NgApexchartsModule,
-    ReactiveFormsModule, HttpClientModule, AuthModuleRouting,SocialLoginModule,FormsModule
+    ReactiveFormsModule, HttpClientModule, AuthModuleRouting,SocialLoginModule,FormsModule,QuestionModule
   ],
   providers: [
     {

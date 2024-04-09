@@ -31,18 +31,35 @@ export class ShowQuestionComponent {
  basicquestionList!: Question[]
   searchSubjectResults: Question[] = [];
   currentUser!:any;
-  
+  code = ''; // משתנה שיכיל את קוד המשתמש
+  editorOptions = { theme: 'vs-dark', language: 'typescript' }; // אפשרויות העריכה של המונאקו
+
   constructor(private _questionService: QuestionService, private route: ActivatedRoute, private router: Router) { }
   ngOnInit(): void {
     
     this.showAnswer = false;
-    this.dailyQuestion = this._questionService.getDailyQuestionfromService();
+    const encryptedDataFromStorage = localStorage.getItem('dailyQuestion');
+if (encryptedDataFromStorage) {
+  const decryptedData = decodeURIComponent(atob(encryptedDataFromStorage));
+  this.dailyQuestion  =<Question>JSON.parse(decryptedData);
+  }
+    // this.dailyQuestion = this._questionService.getDailyQuestionfromService();
+//     if(this.router.url.includes("MyAccount")){
+//       this._questionService.getQuestionByUserId("dvori").subscribe({
+// next:(res)=>{
+//   this.questionList = res
+//   console.log(res);
+// },error:(err)=>{
+//   console.log(err);
+// }
+//       })
 
-   
-  
+//     }
+//     else{
     this.route.params.subscribe((parm) => {
       this.categoryId = parm['id'];
       this.categoryName = parm['text'];
+      
       console.log(this.categoryId)
       this._questionService.getQuestionByCategoryId(this.categoryId).subscribe({
         next: (res) => {
@@ -56,6 +73,7 @@ export class ShowQuestionComponent {
         }
       })
     })
+  // }
   }
 ceekRole(){
   if (typeof localStorage !== 'undefined') {
@@ -67,7 +85,12 @@ return false;
 }
   goReadMore(question: Question): void {
     console.log("cdkkc");
-    this._questionService.saveObject(question)//save in service!
+    // this._questionService.saveObject(question)//save in service!
+
+    const dataToEncrypt =  JSON.stringify(question);
+    const secretKey ='123456pp';
+    const encryptedData = btoa(encodeURIComponent(dataToEncrypt));
+    localStorage.setItem('currentQuestion', encryptedData);
     this.router.navigate(['/question/card-question', question.id]);
   }
 // environment
@@ -95,6 +118,36 @@ this._questionService.delete(question.id?question.id:null).subscribe({
   }
 })
   }
+
+  getMyQuestion():void{
+    if (typeof localStorage !== 'undefined') {
+      const userString = localStorage.getItem('user');
+      const user = userString ? JSON.parse(userString) : null;
+    if(user!=null){
+    this._questionService.getQuestionByUserId(user.username,this.categoryId).subscribe({
+      next: (res) => {
+        this.questionList = res;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  
+  }}
+   }
+  getUserImageFromSessionStorage():string{
+
+    if (typeof localStorage !== 'undefined') {
+      const currentTimestamp = Math.floor(Date.now() / 1000); // זמן נוכחי בפורמט Unix (בשניות)
+  const exp = parseInt(localStorage.getItem('exp') || '0', 10); // קבלת ערך ה-exp מ-local storage
+  if( exp > currentTimestamp) {
+    const userString = localStorage.getItem('user');
+    const user = userString ? JSON.parse(userString) : null;
+    return (user && user.img);
+  }
+}
+      return  "https://lh3.googleusercontent.com/-JM2xsdjz2Bw/AAAAAAAAAAI/AAAAAAAAAAA/DVECr-jVlk4/photo.jpg";
+  }   
   sortByNewest() {
     this.questionList.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
@@ -113,8 +166,10 @@ this._questionService.delete(question.id?question.id:null).subscribe({
       this.questionList=this.searchSubjectResults;
     } else {
       // אם לא מוזן טקסט, נסיר את כל התוצאות הקיימות
-      this.searchSubjectResults = [];
+      this.questionList=this.basicquestionList;
     }
   }
+
+  
 }
 

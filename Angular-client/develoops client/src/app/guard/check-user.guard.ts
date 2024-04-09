@@ -61,11 +61,12 @@ if (expiration) {
     }).then((result) => {
       if (result.isConfirmed) {
         console.log(result.isConfirmed);
-
-        // Navigate to SignIn component
+        window.location.href = '/auth/SignIn' ;
+       
         // Router.navigate(['/auth/SignIn']);
       } else if (result.dismiss === Swal.DismissReason.cancel) { // Handle SignUp button click
         console.log(result.dismiss);
+        window.location.href = '/auth/SignUp' ;
         // Navigate to SignUp component
         // Router.navigate(['/auth/SignUp']);
       }

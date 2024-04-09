@@ -26,7 +26,7 @@ declare global {
   styleUrl: './sign-in.component.css'
 })
 export class SignInComponent {
-  
+  submitted = false;
   loginForm!: FormGroup;
   socialUser!: SocialUser;
   isLoggedin?: boolean;
@@ -120,7 +120,9 @@ logOut(): void {
     this.router.navigate(['/auth/SignUp']);
   }
   save() {
-    console.log(this.loginForm.value);
+     this.submitted = true;
+   
+      console.log(this.loginForm.value);
     let s = this.loginForm.value;
     console.log(s);
     this._userService.login(s.userName, s.password).subscribe({
@@ -137,7 +139,7 @@ logOut(): void {
         // Now you can use the token as needed
         // For example, you might want to save the token in sessionStorage
         localStorage.setItem('token', token);
-        // localStorage.setItem('user', JSON.stringify(user));
+         localStorage.setItem('user', JSON.stringify(user));
 //         document.cookie="user="+JSON.stringify(user)
 // console.log(document.cookie);
         localStorage.setItem('exp', exp);
@@ -151,5 +153,5 @@ logOut(): void {
         console.log("An error occurred while parsing the response.");
       }
     });
-  }
-}
+  }}
+

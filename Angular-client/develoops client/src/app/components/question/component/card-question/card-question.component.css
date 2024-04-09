@@ -586,6 +586,10 @@ outline: none;
 .searchTerm:focus {
   color: #85a0f6;
 }
+.big-button {
+  font-size: 20px;
+  padding: 10px 20px;
+}
 
 
 

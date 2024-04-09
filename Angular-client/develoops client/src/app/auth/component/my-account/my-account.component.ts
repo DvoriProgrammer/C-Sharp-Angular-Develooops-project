@@ -3,7 +3,6 @@
 import { Component, ViewChild,AfterViewInit,ElementRef, } from "@angular/core";
 import { QuestionService } from "../../../services/question.service";
 import { UserService } from "../../../services/user.service";
-
 interface UserActivityData {
   [month: string]: { [day: number]: number }; // Month as string (key) and day data as object
 }
@@ -88,6 +87,7 @@ export class MyAccountComponent {
     this. getUserActivity();
 
   }
+  
   getUserActivity(): void {
 
    this.userService.getUserActivity(this.userId) .subscribe(data => {

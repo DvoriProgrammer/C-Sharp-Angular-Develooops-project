@@ -93,7 +93,11 @@
 
   <div *ngIf="currentQuestion.answers" style="right: 0;"><app-answer-list [answersList]="currentQuestion.answers"></app-answer-list></div>
 </div>
-<textarea #codeInput rows="10" cols="50"></textarea>
+
+<button mat-button color="primary" class="big-button" (click)="goBack()">
+  <mat-icon style="width: 180%;">arrow_back</mat-icon> 
+</button>
+
 
 
 

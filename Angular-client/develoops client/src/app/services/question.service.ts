@@ -67,8 +67,8 @@ export class QuestionService {
   getAllQuestion(): Observable<Question[]> {
     return this._httpClient.get<Question[]>('https://localhost:7063/api/Question')
   }
-  getQuestionByUserId(): Observable<Question[]> {
-    return this._httpClient.get<Question[]>('https://localhost:7063/api/Question/byUserId/${id}')
+  getQuestionByUserId(userName:string,categoryId:number): Observable<Question[]> {
+    return this._httpClient.get<Question[]>(`https://localhost:7063/api/Question/byUserId/${userName}/${categoryId}`)
   }
   getQuestionByCategoryId(id: number): Observable<Question[]> {
     return this._httpClient.get<Question[]>(`https://localhost:7063/api/Question/byCategoryId/${id}`)
@@ -105,7 +105,7 @@ export class QuestionService {
 
   getDailyQuestion(): Observable<Object> {
     const admin = "admin";
-    return this._httpClient.get<Question>(`https://localhost:7063/api/Question/deilyQuestion/${"bvv"}`)
+    return this._httpClient.get<Question>(`https://localhost:7063/api/Question/dailyQuestion/${admin}`)
 
   }
 }

@@ -61,9 +61,9 @@
 							data-shape="rectangular"
 							data-logo_alignment="left">
 						</div> 
-					<button [disabled]="loginForm.invalid" (click)="save()" class="btn solid">Login</button>
-				
-				
+	
+					<button [disabled]="loginForm.invalid" (click)="save()" class="btn solid">Login</button>		
+
 				</form>
 		
 		</div>
@@ -110,3 +110,12 @@
            document.getElementsByTagName("head")[0].appendChild(script);
          })();
         </script>
+		<a href="#" onclick="signOut();">Sign out</a>
+		<script>
+		  function signOut() {
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+			  console.log('User signed out.');
+			});
+		  }
+		</script>

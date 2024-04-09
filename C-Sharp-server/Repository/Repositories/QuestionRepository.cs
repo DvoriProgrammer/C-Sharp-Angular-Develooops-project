@@ -47,8 +47,9 @@ namespace Repository.Repositories
         public async Task<List<Question>> GetAll()
         {
             
-            var x= await this.context.Ouestions.Include(c => c.User).Include(c => c.Answers).ToListAsync();
-            return x;
+            var x= await this.context.Ouestions.Include(c => c.User).Include(c => c.Answers).ThenInclude(a => a.User).ToListAsync();
+          
+                return x;
         }
 
         public async Task Post(User user)

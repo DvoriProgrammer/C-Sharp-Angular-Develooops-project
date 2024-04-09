@@ -15,6 +15,9 @@ using Microsoft.AspNetCore.Identity;
 using System.Net.NetworkInformation;
 using Repository.Repositories;
 using Service.Services;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
 
 
 
@@ -32,6 +35,10 @@ namespace MyProject.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+
+     
+
+       
 
         private readonly IServiceUserExtention<UserDto> service;
 
@@ -120,16 +127,7 @@ namespace MyProject.Controllers
                     singlersDto.Password = hashedPassword;
                    await service.Add(singlersDto);
 
-                    var userDto = new UserShortenedDto() {Id= singlersDto.Id, Username = singlersDto.Username, Email = singlersDto.Email, FileImage = singlersDto.FileImage, Role = singlersDto.Role, Img = singlersDto.Img };
-                   
-                      var im = GetImage(userDto.Img);
-                    if (im != null)
-                    {
-                        userDto.Img = GetImage(userDto.Img); ;
-                    } 
-                    var token = Generate(singlersDto);
-                    // return Ok(new { token = token, newTime = DateTime.Now.ToString(),experinse = 30.ToString(),user= userDto });
-                    return Ok(new { token, userDto});
+                    return Ok(new { singlersDto.Email });
                     // Return token along with success message
 
 
@@ -271,6 +269,9 @@ namespace MyProject.Controllers
                 return NotFound(ex.Message);
             }
         }
+
+       
+
     }
 }
 

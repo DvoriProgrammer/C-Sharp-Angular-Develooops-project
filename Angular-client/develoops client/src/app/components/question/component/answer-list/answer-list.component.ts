@@ -56,7 +56,9 @@ ngOnChanges(changes: SimpleChanges): void {
 replaceNewlinesWithBr(content: string): string {
   return content.replace(/\n/g, '<br>');
 }
-addScore(answerId:number):void{
+
+addScore(answerId:number,answer:Answer):void{
+  answer.score++;
   if (typeof localStorage !== 'undefined') {
     const userString = localStorage.getItem('user');
     const user = userString ? JSON.parse(userString) : null;

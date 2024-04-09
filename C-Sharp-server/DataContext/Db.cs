@@ -16,7 +16,7 @@ namespace DataContext
         }       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-          optionsBuilder.UseSqlServer("server=DESKTOP-SSNMLFD;database=develoops_dvori_project;TrustServerCertificate=true;trusted_connection=true;");
+          optionsBuilder.UseSqlServer("server=DESKTOP-SSNMLFD;database=develooops_project;TrustServerCertificate=true;trusted_connection=true;");
        }
 
     }

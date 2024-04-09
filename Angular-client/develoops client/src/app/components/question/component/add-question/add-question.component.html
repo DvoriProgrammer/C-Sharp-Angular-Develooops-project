@@ -2,7 +2,12 @@
 <mat-progress-spinner *ngIf="loading" mode="indeterminate" style="position: sticky;z-index: 9999;left: 50%;top:50%"></mat-progress-spinner>
 <div class="container">
 	<div class="content">
-		<div class="image" style="background-image: url('../../../../../assets/image/Writer.png');
+		<div class="image" style="background-image: url('../../../../../assets/image/askrole.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		height: 80%;"></div>
+		<div class="image" style="background-image: url('../../../../../assets/image/askrobot.png');
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center;
@@ -10,7 +15,7 @@
 			
 	</div>
 	<form id="form" [formGroup]="AddRequrstForm">
-		<div class="title">Add question</div>
+		<div class="title"></div>
 		<div>
 			<label for="password">Title</label>
 			<i class="fas fa-lock"></i>

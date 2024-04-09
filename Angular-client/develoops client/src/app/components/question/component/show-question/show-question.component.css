@@ -661,10 +661,10 @@ h5 {
   display: flex;
 }
 
-/* .searchTerm {
+.searchTerm {
   width: 100%;
   border: 3px solid  #0c1d55;
-  border-right: none;
+ left: 10%;
   padding: 5px;
   height: 20px;
   border-radius: 5px 0 0 5px;
@@ -678,4 +678,4 @@ h5 {
 }
 .searchTerm:focus {
   color: #010514;
-} */
+}

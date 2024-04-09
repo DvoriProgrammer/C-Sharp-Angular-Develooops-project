@@ -86,27 +86,11 @@ isExist!:false;
   
      this._userService.postUser(formData).subscribe({
     next: (res) => {
-      console.log(res);
-      const token = res.token;
-      const user = res.userDto; // userDto instead of user
-      // Now you can use the token as needed
-      console.log('Token:', token);
-      const Email=user.email;
-      const parts = token.split('.');
-        
-      const payload = JSON.parse(atob(parts[1]));
-      
-      const exp = payload['exp'];//תוקף
-      // For example, you might want to save the token in sessionStorage
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify(user));
-      // localStorage.setItem('currentTime', res.currentTime);
-       localStorage.setItem('exp', exp);
-      // localStorage.removeItem('exp');
-      // localStorage.removeItem('ait');
-      // this._userService.setCurrentUser(res);
-      console.log(Email)
-      this._userService.sendEmail(Email,"Welcome to develooops 🤩🤩","Hey Happy to have you join  to our website .  From now on you can ask questions and get answers. and help friends."
+      console.log(res.email);
+  
+      this.router.navigate(['/auth/SignUp']);
+   
+      this._userService.sendEmail(res.email,"Welcome to develooops 🤩🤩","Hey Happy to have you join  to our website .  From now on you can ask questions and get answers. and help friends."
     
     
     ).subscribe({
@@ -118,9 +102,12 @@ isExist!:false;
   
           console.error(err);
           console.log("An error occurred while parsing the response.");
+          if (err.status === 200) {
+            this.router.navigate(['/auth/SignIn']);
+          }
         }
       });
-     this.router.navigate(['/home']);
+    
     },
     
     error: (err) => {  

@@ -11,6 +11,8 @@ import { Answer } from '../../../../models/answer.model';
 import { AnswerService } from '../../../../services/answer.service';
  import { AnswerListComponent } from '../answer-list/answer-list.component';
  import { DomSanitizer } from '@angular/platform-browser';
+ import { Location } from '@angular/common';
+
  
  import Swal from 'sweetalert2'; // Import SweetAlert
 
@@ -53,7 +55,7 @@ export class CardQuestionComponent {
   userId!:number; 
   
 output: string = '';
-  constructor( private _questionService:QuestionService ,private _answerService:AnswerService,private router:Router,public dialog: MatDialog) { 
+  constructor( private _questionService:QuestionService ,private _answerService:AnswerService,private router:Router,public dialog: MatDialog,private location: Location) { 
    //this.currentQuestion = this.route.snapshot.state.question;
   }
   // ngAfterViewInit(): void {
@@ -79,10 +81,13 @@ output: string = '';
        } 
  
       // Initialize Ace Editor
-    
-   
-     this.currentQuestion = this._questionService.getSavedObject();
-     console.log(this.currentQuestion); 
+    //  this.currentQuestion = this._questionService.getSavedObject();
+    //  console.log(this.currentQuestion); 
+    const encryptedDataFromStorage = localStorage.getItem('currentQuestion');
+    if (encryptedDataFromStorage) {
+      const decryptedData = decodeURIComponent(atob(encryptedDataFromStorage));
+      this.currentQuestion  =<Question>JSON.parse(decryptedData);
+      }
     }
     ngOnChanges(changes: SimpleChanges): void {
       // Check if the 'answersList' input has changed
@@ -136,7 +141,9 @@ output: string = '';
     
     }
 
-    
+    goBack(): void {
+      this.location.back();
+    }
       }
       
        

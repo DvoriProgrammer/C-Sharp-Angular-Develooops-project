@@ -52,6 +52,11 @@ export class HomeComponent {
     this._questionService.getDailyQuestion().subscribe((question) => {
      console.log(question); 
      this.dailyQuestion = <Question>question;
+     const dataToEncrypt =  JSON.stringify(this.dailyQuestion);
+     const secretKey ='123456pp';
+     const encryptedData = btoa(encodeURIComponent(dataToEncrypt));
+     localStorage.setItem('dailyQuestion', encryptedData);
+    //  localStorage.setItem('dailyQuestion', JSON.stringify(this.dailyQuestion))
      this._questionService.setDailyQuestion(<Question>question);
      this.startSlider();
      });

@@ -8,7 +8,10 @@
       <span class="overlap-text">o</span>
       <span>ps</span> -->
     <!-- <button (click)="goHome()"><div>Develooops/></div></button> -->
-    <p mat-flat-button (click)="goHome()" style=" font-size: medium; margin: 1%;">Develooops</p>
+    <p mat-flat-button (click)="goHome()" style="font-size: large; margin: 1%;  cursor: pointer;">
+      <span >&lt;</span>Develooops/<span >&gt;</span>
+    </p>
+    
   </div>
   <!-- <a routerLink="/about"> |About</a> -->
   <span class="spacer"></span>
@@ -24,7 +27,7 @@
     <mat-icon>share</mat-icon>
 
   </button> -->
-hello
+
 <button (click)="moveMyAccount()" style="background:none; border: none; padding: 0;width: 4%;height: 100%;border-radius: 50%;">
         <img [src]="getUserImageFromSessionStorage()" alt="Avatar" style="	width:100%;
         height:100%;

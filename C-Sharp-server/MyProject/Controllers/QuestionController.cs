@@ -103,7 +103,7 @@ namespace MyProject.Controllers
         }
 
 
-        [HttpGet("deilyQuestion/{admin}")]
+        [HttpGet("dailyQuestion/{admin}")]
      //[ Authorize(Roles = "admin")]
         public async Task<QuestionDto> Get(string admin)
         {
@@ -193,7 +193,7 @@ namespace MyProject.Controllers
                     {
                         answer.User.Img = imm;
                     }
-                 
+
                 }
             }
             if (filteredQuestions == null )
@@ -205,16 +205,38 @@ namespace MyProject.Controllers
 
 
 
-        [HttpGet("byUserId/{userName}")]
-        [Authorize(Roles = "admin")]
-        public async Task<IActionResult> GetbyUserId(string userName)
+        [HttpGet("byUserId/{userName}/{categoryId}")]
+       
+        public async Task<IActionResult> GetbyUserId(string userName,long categoryId)
         {
-            var users =await Get();
+            var questions = await serviceQuestionExtention.GetQuestionsByCategory(categoryId);
+    
 
-            var filteredQuestions =  users
+        
+
+            var filteredQuestions = questions
         .Where(item => item.User.Username== userName).ToList();
+            foreach (var item in filteredQuestions)
+            {
+                var im = GetImage(item.User.Img);
+                if (im != null)
+                {
+                    item.User.Img = im;
+                }
 
-         
+                item.Img = GetImage(item.Img);
+
+                foreach (var answer in item.Answers)
+                {
+                    var imm = GetImage(answer.User.Img);
+                    if (imm != null)
+                    {
+                        answer.User.Img = imm;
+                    }
+
+                }
+            }
+
             if (filteredQuestions == null)
             {
                 return NotFound("No questions found for the specified user");

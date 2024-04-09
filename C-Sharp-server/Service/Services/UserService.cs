@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Common.Dto;
+using Microsoft.Extensions.Logging;
 using Repository.Entities;
 using Repository.Interface;
 using Repository.Repositories;
@@ -102,5 +103,6 @@ namespace Service.Services
 
             return  activityPerMonth;
         }
+     
     }
 }

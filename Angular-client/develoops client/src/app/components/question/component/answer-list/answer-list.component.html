@@ -1,6 +1,13 @@
 
 
-  <div class="contain-question">
+  <div class="contain-question" style="  left: 40%;
+  width: 180%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative; 
+  
+ 
+  ">
   <ng-container *ngIf="answersList">
     <div *ngFor="let answer of answersList" class="comment" style="left:40%;width:60%;display: grid; grid-template-columns: 1fr  1fr;">
       <!-- תוכן התשובה -->
@@ -25,7 +32,7 @@
         <p [innerHTML]="replaceNewlinesWithBr(answer.content)" style="left:8%"></p>
       </div>
       <div style="display: flex; align-items: center;">
-        <button *ngIf="answer.id !== undefined" (click)="addScore(answer.id)">👍</button>
+        <button *ngIf="answer.id !== undefined" (click)="addScore(answer.id,answer)">👍</button>
         <span style="margin: 0 5px;">{{answer.score}}</span>
        
       </div>
@@ -36,5 +43,5 @@
   
   </ng-container>
 </div>
-  <!-- כפתורי לייק, מס הנקודות ודיסלייק -->
+
  

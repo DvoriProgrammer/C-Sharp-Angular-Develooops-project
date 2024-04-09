@@ -1,23 +1,40 @@
-<br /><br />
+<br />
+<br />
 
 
-<div class="container" style="margin-top: 50px;">
+
+
+
+<div class="container" style="margin-top: 50px; text-align: center;">
   <div class="wrap">
-      <div class="search">
+      <div class="search" style="display: inline-block;">
           <input type="text" class="searchTerm" placeholder=" looking for"
               [(ngModel)]="searchSubjectText" (input)="onSearchInputChange()">
-          <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
-          </button>
       </div>
   </div>
 </div>
 
 
-<div style="display: grid; grid-template-columns:1.5fr 4.0fr 1fr 1fr; " class="stay">
-  <div><button mat-fab color="green" (click)="moveAddQuestion()" class="btnAdd">
+<!-- <ngx-monaco-editor
+  [(ngModel)]="code"
+  [options]="editorOptions"
+  style="height: 90vh; width: 100%;color: black;"
+></ngx-monaco-editor> -->
+
+
+<div style="display: grid; grid-template-columns:2fr 4.0fr 1fr 1fr; " class="stay">
+  <div style="display: flex; gap: 10px;">
+    <button mat-fab color="green" (click)="moveAddQuestion()" class="btnAdd">
       <mat-icon>add</mat-icon>
-    </button></div>
+    </button>
+    <button mat-fab color="green" (click)="getMyQuestion()" class="btnAdd" style="position: relative;">
+      <!-- תמונה -->
+      <img [src]="getUserImageFromSessionStorage()" alt="Avatar" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+      <!-- טקסט -->
+      <!-- <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">הטקסט כאן</span> -->
+    </button>
+  </div>
+  
   <div></div>
   <div><button class="shortBtn" (click)="sortByNewest()">sort by newest</button></div>
   <div>
@@ -28,6 +45,8 @@
 </div>
 <br /><br />
 <div style="display: grid; grid-template-columns: 1fr 4fr 2fr;">
+
+
   <div style=" padding: 2%;">
 
   </div>
@@ -36,7 +55,11 @@
       style="top:0%;display: flex; flex-wrap: wrap; justify-content: space-between; padding: 15px;">
       <div *ngFor="let question of questionList" class="contain-question">
         <div class="card" style="left: 20%;">
+          <button mat-fab color="primary" aria-label="Example icon button with a delete icon" *ngIf="ceekRole()" (click)="delete(question)" style="color: blue;height:9%;background-color: rgba(255, 255, 255, 0);  border: none;   box-shadow: none;;">
+            <mat-icon>delete</mat-icon>
+          </button>
           <div style="width: 100%; max-width:125%; margin: auto;">
+            
             <img *ngIf="question?.img" [src]="question?.img" style="width:120%; height: auto; display: block;  border-radius: 0.93rem 0.93rem 0 0;
             height: calc(15.6rem - 4.81rem);
             width: 100%;
@@ -44,6 +67,7 @@
           </div>
           <div class="twitt">
             <br />
+            
             <h1 *ngIf="question.title">{{question.title}}</h1>
             <a class="tag" href="#" style="left: 0;">#programming</a>
             <a class="tag" href="#">#coding#</a>
@@ -66,7 +90,8 @@
                 <p class="name" style="color: black;">{{question?.user?.username}}</p>
                 <p>{{question?.date}}</p>
                 <!-- <p class="uname">@realjohndoe</p> -->
-                <button *ngIf="ceekRole()" (click)="delete(question)">Delete</button>
+                <!-- <button *ngIf="ceekRole()" (click)="delete(question)">Delete</button> -->
+               
               </div>
             </div>
             <i class="fa-brands fa-twitter icon"></i>
