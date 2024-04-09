@@ -22,3 +22,14 @@ Authentication: JSON Web Tokens (JWT)
 Database: SQL Server
 
 Integration: Gmail API for sending emails,openAI,OAuth 2.0 google API
+
+
+![image](https://github.com/DvoriProgrammer/C-Sharp-Angular-Develooops-project/assets/146278969/b848cdc0-c43a-4f69-a376-8351367a7197)
+
+
+![image](https://github.com/DvoriProgrammer/C-Sharp-Angular-Develooops-project/assets/146278969/0c4d09a0-d09e-40bf-bc45-9f5605f7cdfb)
+
+
+
+![image](https://github.com/DvoriProgrammer/C-Sharp-Angular-Develooops-project/assets/146278969/222ccc82-14cd-4b0d-80ca-c703b2c5e8b6)
+
