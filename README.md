@@ -1,6 +1,7 @@
 If you're a programmer, you've probably encountered errors.
 Sometimes you sat on them for days and weeks.
-Yes, we as programmers say oops a lot. 
+ When you say oops,
+it's time to Develooops 
 
 
 Developoops - a share website for questions and answers on software development issues.
