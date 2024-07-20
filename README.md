@@ -11,10 +11,35 @@ Including connecting to OpenAi - the first to answer the question.
 
 
 
+# C-Sharp Angular Develooops Project
+
+This repository contains a full-stack project developed using C# (ASP.NET Core) for the backend and Angular for the frontend. The project demonstrates the integration of these technologies to create a robust web application.
+
+
+## Project Overview
+
+This project showcases the use of ASP.NET Core and Angular to build a scalable and maintainable web application. The backend is implemented using ASP.NET Core Web API, while the frontend is developed using Angular. The project includes user authentication, data management, and communication between the frontend and backend through HTTP requests.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
 
 
 
-Technologies Used:
+## Installation
+
+Follow these steps to set up the project locally:
+
+### Backend (ASP.NET Core)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DvoriProgrammer/C-Sharp-Angular-Develooops-project.git
+   cd C-Sharp-Angular-Develooops-project/backend
+
+
+
+##**Technologies Used**:
 Frontend: Angular 17
 
 Backend:c#-entity framework
