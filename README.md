@@ -39,7 +39,7 @@ Follow these steps to set up the project locally:
 
 
 
-##**Technologies Used**:
+### **Technologies Used**:<br>
 Frontend: Angular 17
 
 Backend:c#-entity framework
