@@ -20,9 +20,7 @@ This repository contains a full-stack project developed using C# (ASP.NET Core) 
 
 This project showcases the use of ASP.NET Core and Angular to build a scalable and maintainable web application. The backend is implemented using ASP.NET Core Web API, while the frontend is developed using Angular. The project includes user authentication, data management, and communication between the frontend and backend through HTTP requests.
 
-## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
 
 
 
